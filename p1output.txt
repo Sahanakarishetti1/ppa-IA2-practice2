@@ -1,1 +1,7 @@
-
+ gcc -g p1original.c
+ ./a.out
+enter the base  of a triangle
+30
+enter the height of triangle
+20
+30.000000 20.000000 is 300.000000
