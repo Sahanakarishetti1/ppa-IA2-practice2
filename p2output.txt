@@ -1,1 +1,266 @@
+gcc -g p2original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x836: file p2original.c, line 21.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p2original.c:21
+21     int a= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+23
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:22
+22     int b= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+ gcc -g p1original.c
+ gcc -g p2original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) clear
+No source file specified.
+(gdb) b main
+Breakpoint 1 at 0x850: file p2original.c, line 29.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2original.c:29
+29     int a= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+23
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:30
+30     int b= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+25
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:31
+31     int c= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+35
+7     return x;
+(gdb) n
+8   }
+(gdb) 
+main () at p2original.c:32
+32     check_scalene(a,b,c);
+(gdb) s
+check_scalene (a=23, b=25, c=35) at p2original.c:11
+11    int  check_scalene=(a !=b||b!=c||c!=a);
+(gdb) n
+13  }
+(gdb) n
+main () at p2original.c:34
+34     return 0;
+(gdb) n
+36  }(gdb) b output
+Breakpoint 2 at 0x56264ca00809: file p2original.c, line 16.
+(gdb) n
+__libc_start_main (main=0x56264ca00848 <main>, argc=1, argv=0x7fffd51b15c8, 
+    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7fffd51b15b8) at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) n
+[Inferior 1 (process 3189) exited normally]
+(gdb) b output
+Note: breakpoint 2 also set at pc 0x56264ca00809.
+Breakpoint 3 at 0x56264ca00809: file p2original.c, line 16.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2original.c:29
+29     int a= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+23
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:30
+30     int b= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+34
+7     return x;
+ gcc -g p1original.c
+ b main
+bash: b: command not found
+ gcc -g p3original.c
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ gcc -g p2original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x850: file p2original.c, line 29.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2original.c:29
+29     int a= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+24
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:30
+30     int b= input_side();
+(gdb) s
+input_side () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle\n");
+(gdb) n
+enter the side of triangle
+6     scanf("%d",&x);
+(gdb) n
+24
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:31
+31     int c= input_side();
+(gdb) n
+enter the side of triangle
+24
+32     check_scalene(a,b,c);
+(gdb) s
+check_scalene (a=24, b=24, c=24) at p2original.c:11
+11    int  check_scalene=(a !=b||b!=c||c!=a);
+(gdb) n
+13  }
+(gdb) n
+main () at p2original.c:34
+34      output(a,b,c,scalene);
+(gdb) s
+output (a=24, b=24, c=24, scalene=0) at p2original.c:16
+16    if(a !=b||b!=c||c!=a)
+(gdb) n
+22       printf("the triangle is not scalene");
+(gdb) n
+24  }
+(gdb) c
+Continuing.
+the triangle is not scalene[Inferior 1 (process 3533) exited normally]
+(gdb) 

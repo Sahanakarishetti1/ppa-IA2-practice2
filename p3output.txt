@@ -1,1 +1,11 @@
-
+gcc -g p3original.c
+ ./a.out
+enter the num
+4
+4 is a composite num
+ gcc -g p3original.c
+ ./a.out
+enter the num
+3
+3 is nt a composite  num
+ 
