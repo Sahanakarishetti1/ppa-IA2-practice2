@@ -2,13 +2,13 @@
 the keyboard. Write a program to convert this temperature 
 into Centigrade degrees.*/
 #include<stdio.h>
-int main()
-{
-  float f;
-  printf("enter temp in f\n");
-  scanf("%f",&f);
-  float c;
-  c = (f-32)*5/9 ;
-  printf("%f is in c",c);
+int main( ) 
+{ 
+ int a,b,c,d,e;
+  printf("enter 5 digit no\n");
+  scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+  int sum=a+b+c+d+e;
+  printf("%d is the sum\n",sum);
+  return 0;
   
 }

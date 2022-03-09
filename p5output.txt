@@ -1,1 +1,7 @@
-
+gcc -g p5original.c
+ ./a.out
+enter the num
+3
+enter the num
+6
+3 is gcd of a 3 and 6
