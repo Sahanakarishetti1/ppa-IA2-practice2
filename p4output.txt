@@ -1,1 +1,13 @@
-
+ gcc -g p4original.c
+ ./a.out
+enter the size if array
+4
+enter the num into array
+2
+enter the num into array
+4
+enter the num into array
+5
+enter the num into array
+6
+10
