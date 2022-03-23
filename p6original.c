@@ -7,7 +7,7 @@ void input_string(char *a)
 }
 char str_reverse(char *a,char *re)
 {
-  printf("the reverse of %s is %s\n",a,re);
+  
   char temp;
   int i=0,j=0;
   j=strlen(re)-1;
@@ -28,9 +28,9 @@ void output(char *a,char *re)
 }
 int main()
 {
- char a[20],re[20];
-  input_string(a);
-  str_reverse(a,re);
-  output(a,re);
+ char a,re[20];
+  input_string(re);
+  str_reverse(&a,re);
+  output(&a,re);
   return 0;
 }
