@@ -1,1 +1,214 @@
+gcc -g p8original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0xae8: file p8original.c, line 63.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p8original.c:63
+63  {
+(gdb) n
+65    n=input_n();
+(gdb) s
+input_n () at p8original.c:9
+9   {
+(gdb) n
+11    printf("enter the no of triangles\n");
+(gdb) n
+enter the no of triangles
+12    scanf("%d",&n);
+(gdb) n
+3
+13    return n;
+(gdb) n
+14  }
+(gdb) n
+main () at p8original.c:66
+66    Triangle t[n],small;
+(gdb) n
+67    input_n_triangles( n,t);
+(gdb) s
+input_n_triangles (n=3, t=0x7fffc92b3b00) at p8original.c:24
+24    for(int i=0;i<n;i++)
+(gdb) n
+26    t[i]=input_triangle();
+(gdb) n
+enter the base and altitude of triangle
+2
+3
+24    for(int i=0;i<n;i++)
+(gdb) n
+26    t[i]=input_triangle();
+(gdb) n
+enter the base and altitude of triangle
+3
+4
+24    for(int i=0;i<n;i++)
+(gdb) n
+26    t[i]=input_triangle();
+(gdb) n
+enter the base and altitude of triangle
+4
+5
+24    for(int i=0;i<n;i++)
+(gdb) n
+28    }
+ gcc -g p1original.c
+ gcc -g p8original.c
+ ./a.out
+enter the no of triangles
+2
+enter the base and altitude of triangle
+3
+4
+enter the base and altitude of triangle
+25
+20
+3.0,4.0 and
+25.0,20.0
+ is a triangle with base=3.0 and altitude =4.0 having area =6.0
+ gcc -g p8original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0xaf9: file p8original.c, line 64.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+
+Program received signal SIGHUP, Hangup.
+ gcc -g p1original.c
+ gcc -g p8original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0xaf9: file p8original.c, line 64.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p8original.c:64
+64  {
+(gdb) n
+66    n=input_n();
+(gdb) s
+input_n () at p8original.c:9
+9   {
+(gdb) n
+11    printf("enter the no of triangles\n");
+(gdb) n
+enter the no of triangles
+12    scanf("%d",&n);
+(gdb) n
+2
+13    return n;
+(gdb) n
+14  }
+(gdb) n
+main () at p8original.c:67
+67    Triangle t[n],small;
+(gdb) s
+68    input_n_triangles( n,t);
+(gdb) s
+input_n_triangles (n=2, t=0x7ffe90da9f70) at p8original.c:24
+24    for(int i=0;i<n;i++)
+(gdb) n
+26    t[i]=input_triangle();
+(gdb) n
+enter the base and altitude of triangle
+3
+4
+24    for(int i=0;i<n;i++)
+(gdb) n
+26    t[i]=input_triangle();
+(gdb) n
+enter the base and altitude of triangle
+4
+5
+24    for(int i=0;i<n;i++)
+(gdb) n
+28    }
+(gdb) n
+main () at p8original.c:69
+69     find_areas_n( n,t);
+(gdb) s
+find_areas_n (n=2, t=0x7ffe90da9f70) at p8original.c:36
+36    for(int i=0;i<n;i++)
+(gdb) n
+38         find_area(&t[i]);
+(gdb) n
+36    for(int i=0;i<n;i++)
+(gdb) n
+38         find_area(&t[i]);
+(gdb) n
+36    for(int i=0;i<n;i++)
+(gdb) n
+40  }
+(gdb) n
+main () at p8original.c:70
+70    small=find_smallest_triangle(n,t);
+(gdb) s
+find_smallest_triangle (n=2, t=0x7ffe90da9f70) at p8original.c:44
+44    small=t[0];
+(gdb) n
+45    for(int i=1;i<n;i++)
+(gdb) n
+47        if(small.area>t[i].area)
+(gdb) n
+45    for(int i=1;i<n;i++)
+(gdb) n
+53    return small;
+(gdb) n
+54  }
+(gdb) c
+Continuing.
+3.0,4.0 and
+4.0,5.0
+ is a triangle with base=3.0 and altitude =4.0 having area =6.0
+[Inferior 1 (process 2763) exited normally]
+(gdb) 
