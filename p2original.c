@@ -8,12 +8,12 @@ int input_side()
 }
 int check_scalene(int a,int b,int c)
 {
-  int  check_scalene=(a !=b||b!=c||c!=a);
+  int  check_scalene=(a !=b &&b!=c && c!=a);
    
 }
 void  output(int a,int b,int c,int scalene)
 {
-  if(a !=b||b!=c||c!=a)
+  if(a !=b && b!=c&& c!=a)
    {
      printf("the triangle is scalene");
      }
