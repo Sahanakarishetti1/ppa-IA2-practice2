@@ -20,6 +20,7 @@ char str_reverse(char *a,char *re)
       i++;
       j--;
     }
+  return *re;
     
 }
 void output(char *a,char *re)

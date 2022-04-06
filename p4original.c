@@ -30,10 +30,12 @@ int sum_composite_numbers(int n,int a[n])
         t++;
     }
   if(t!=0)
+  {
     sum=sum+a[i];
   }
 return sum;
 }
+  }
 void out_put(int sum)
 {
   printf("%d\n",sum);
