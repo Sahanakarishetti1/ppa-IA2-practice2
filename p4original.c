@@ -17,12 +17,12 @@ void input_array(int n,int a[n])
 }
 int sum_composite_numbers(int n,int a[n])
 {
-  int i;
+  int i,j;
   int sum=0;
-  for(int i=0;i<n;i++)
+  for( i=0;i<n;i++)
     {
       int t=0;
-      for(int j=2;j<a[i];j++)
+      for(j=2;j<a[i];j++)
         {
       
         
